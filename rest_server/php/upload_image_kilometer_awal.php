@@ -2,12 +2,13 @@
 
 require_once 'global_path.php';
 
-$no_pengajuan_full_day = $_POST['no_pengajuan_full_day'];
+$nama_foto = $_POST['nama_foto'];
 $image = base64_decode($_POST['foto']);
-$nama = $no_pengajuan_full_day;
+$nama_folder = $_POST['nama_folder'];
+$nama = $nama_foto;
 
 // Linux 36.88.110.134
-$targer_dir = "/var/www/html/ess-api-android-bmp/rest_server/image/upload_izin/" . $nama . ".jpeg";
+$targer_dir = "/var/www/html/ess-api-android-bmp/rest_server/image/upload_kilometer_awal/" . $nama . ".jpeg";
 
 // Tambahin pengecekan apakah direktori ada dan bisa di-write
 if (!is_writable(dirname($targer_dir))) {
