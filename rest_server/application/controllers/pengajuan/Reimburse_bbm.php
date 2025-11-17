@@ -37,7 +37,7 @@ class Reimburse_bbm extends REST_Controller
 		    'nama_pegawai'     	=> $this->post('nama_pegawai'),
 		    'nomor_polisi'     	=> $this->post('nopol'),
 		    'jenis_kendaraan'  	=> $this->post('jenis_kendaraan'),
-		    'tanggal_display'  	=> $this->post('tanggal'),
+		    'tanggal_permintaan'  	=> $this->post('tanggal_permintaan'),
 		    'tanggal_db'       	=> date('Y-m-d H:i:s', strtotime($this->post('tanggal'))),
 		    'km_awal'          	=> $this->post('km_awal'),
 		    'km_akhir'         	=> $this->post('km_akhir'),
