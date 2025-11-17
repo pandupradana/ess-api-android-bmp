@@ -36,19 +36,21 @@ class M_Reimburse_bbm extends CI_Model
 	                id_reimburse_bbm,
 	                nip_pegawai,
 	                nama_pegawai,
-	                nopol,
+	                nomor_polisi,
 	                jenis_kendaraan,
-	                tanggal,
+	                tanggal_permintaan,
 	                km_awal,
 	                km_akhir,
 	                keterangan,
 	                foto_km_awal,
 	                foto_km_akhir,
+	                url_foto_km_awal,
+	                url_foto_km_akhir,
 	                status,
-	                created_at
+	                timestamp_submit
 	            FROM tbl_reimburse_bbm
 	            WHERE nip_pegawai = '$nip_pegawai'
-	            ORDER BY created_at DESC";
+	            ORDER BY timestamp_submit DESC";
 
 	    $hasil = $this->db->query($sql);
 	    return $hasil->result_array();
