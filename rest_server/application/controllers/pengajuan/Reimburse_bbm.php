@@ -32,21 +32,21 @@ class Reimburse_bbm extends REST_Controller
 
         // Ambil parameter dari POST
         $data = [
-            'id_reimburse_bbm' => $id_reimburse,
-            'nip_pegawai'      => $this->post('nip_pegawai'),
-            'nama_pegawai'     => $this->post('nama_pegawai'),
-            'nopol'            => $this->post('nopol'),
-            'jenis_kendaraan'  => $this->post('jenis_kendaraan'),
-            'tanggal'          => $this->post('tanggal'),      // yyyy-MM-dd HH:mm:ss
-            'km_awal'          => $this->post('km_awal'),
-            'km_akhir'         => $this->post('km_akhir'),
-            'keterangan'       => $this->post('keterangan'),
-            'foto_km_awal'     => $this->post('foto_km_awal'), // nama file aja
-            'foto_km_akhir'    => $this->post('foto_km_akhir'),
-            'url_foto_km_awal'     => $this->post('url_foto_km_awal'), 
-            'urL_foto_km_akhir'    => $this->post('urL_foto_km_akhir'),
-            'status'           => 0,
-            'created_at'       => date('Y-m-d H:i:s'),
+            'id_reimburse_bbm' 	=> $id_reimburse,
+		    'nip_pegawai'      	=> $this->post('nip_pegawai'),
+		    'nama_pegawai'     	=> $this->post('nama_pegawai'),
+		    'nomor_polisi'     	=> $this->post('nopol'),
+		    'jenis_kendaraan'  	=> $this->post('jenis_kendaraan'),
+		    'tanggal_display'  	=> $this->post('tanggal'),
+		    'tanggal_db'       	=> date('Y-m-d H:i:s', strtotime($this->post('tanggal'))),
+		    'km_awal'          	=> $this->post('km_awal'),
+		    'km_akhir'         	=> $this->post('km_akhir'),
+		    'keterangan'       	=> $this->post('keterangan'),
+		    'foto_km_awal'     	=> $this->post('foto_km_awal'),
+		    'foto_km_akhir'    	=> $this->post('foto_km_akhir'),
+		    'url_foto_km_awal'  => $this->post('url_foto_km_awal'),
+		    'url_foto_km_akhir' => $this->post('url_foto_km_akhir'), // sudah bener
+		    'status'           	=> 0
         ];
 
         if ($this->M_Reimburse_bbm->insert_form_reimburse_bbm($data) > 0) {
