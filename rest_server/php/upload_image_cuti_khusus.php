@@ -8,7 +8,7 @@ $image = base64_decode($_POST['foto']);
 $nama = $no_pengajuan_tahunan;
 
 // Linux 36.88.110.134
-$targer_dir = "/var/www/html/ess-api-android-bmp/rest_server/image/upload_cuti_khusus/" . $nama . ".jpeg";
+$targer_dir = "/var/www/html/dev/ess-api-android-bmp/rest_server/image/upload_cuti_khusus/" . $nama . ".jpeg";
 
 // Tambahin pengecekan apakah direktori ada dan bisa di-write
 if (!is_writable(dirname($targer_dir))) {

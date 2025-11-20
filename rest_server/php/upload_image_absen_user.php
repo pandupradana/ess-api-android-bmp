@@ -8,7 +8,7 @@ $nama_folder = $_POST['nama_folder'];
 $nama = $nama_foto;
 
 // Linux 36.88.110.134
-$targer_dir = "/var/www/html/ess-api-android-bmp/rest_server/image/upload_absen_user/" . $nama . ".jpeg";
+$targer_dir = "/var/www/html/dev/ess-api-android-bmp/rest_server/image/upload_absen_user/" . $nama . ".jpeg";
 
 // Tambahin pengecekan apakah direktori ada dan bisa di-write
 if (!is_writable(dirname($targer_dir))) {
